@@ -5,7 +5,7 @@ body{
 /*-------------------------HEADER------------------------- */
 /*General*/
 header {
-    background-color: #f0f0f0;
+    background-color: rgba(0, 204, 255, 0.404);
     padding: 0px 40px;
     font-size: 18px;
     display: flex;
@@ -53,10 +53,109 @@ header > div:last-child img {
     height: 24px;
 }
 
+/*-------------------------MAIN------------------------- */
+main {
+    padding: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+a{
+    font-weight: 450;
+    color: #333;
+    text-decoration: none;
+}
+/*Títulos*/
+main h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Columnas*/
+main section > div {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+}
+
+/*Imagen*/
+main img { /*Me gustaría que fuera un mapa pero no sé cómo*/
+    width: 500px;
+    height: auto; 
+}
+
+/*Párrafos de texto*/
+main p {
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 37px;
+    margin-bottom: 15px; 
+    line-height: 1.7; 
+}
+
+/*CONTACTO*/
+main form {
+    display: grid;
+}
+
+main form input {
+    font-size: 17px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+main form textarea {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+main form a{
+    color: #333;
+    text-decoration: none;
+}
+.qr {
+    width: 400px;
+}
+
+/*PREGUNTAS FRECUENTES*/
+.preguntas{
+    display:block;
+    text-align: center;
+    margin-bottom: 0px;
+    margin: 0px;
+}
+.preguntas p{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 45px;
+}
+
+/*GUÍA DE TALLES*/
+.tablas{
+        margin-left: 12%;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 70px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+#medidas{
+    margin-right: 200px;
+    height: 550px;
+    width: auto;
+}
+
 /*-------------------------FOOTER------------------------- */
 /*General*/
 footer {
-    background-color: #f0f0f0; /* Fondo del footer */
+    background-color: rgba(0, 204, 255, 0.404); /* Fondo del footer */
     padding: 25px; /* Espaciado interno general */
     font-size: 18px;
     text-align: center;
