@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f0f0f0; /* Fondo del footer */
+    padding: 25px; /* Espaciado interno general */
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*Columnas*/
+footer > div {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/*Sacar puntos*/
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/*Enlaces*/
+footer a{
+    color: #333;
+    text-decoration: none;
+}
+
+/*Iconos*/
+footer > div > div ul {
+    display: flex;
+    gap: 15px;
+}
+footer img {
+    width: 28px;
+    height: 28px;
+}
+
+/*Copyright*/
+footer p{
+    font-size: 15px;
+}
