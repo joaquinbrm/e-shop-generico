@@ -124,6 +124,50 @@ main p {
     border: 1px solid black;;
 }
 
+/*PRODUCTOS*/
+.prods{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    text-align: center;
+}
+h3 a{
+    text-align: center;
+    vertical-align: bottom;
+    margin-top: 35px;
+    font-weight: 700;
+}
+aside{
+    text-align: center;
+    background-color: rgba(0, 204, 255, 0.404);
+}
+aside input{
+    width: 50px;
+    text-align: left;
+}
+aside div{
+    margin: 10px;
+}
+.productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    width: 100%;
+    text-align: center;
+}
+.productos img{
+    width: 320px;
+    height: 450px;
+    border: 1px solid black;
+    margin-top: 15px;
+}
+.productos p{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
 /*CONTACTO*/
 main form {
     display: grid;
