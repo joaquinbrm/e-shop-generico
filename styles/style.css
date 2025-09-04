@@ -1,7 +1,9 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: #333; /*juro que no es negro, es gris oscuro*/
+    margin: 0;
 }
+
 /*-------------------------HEADER------------------------- */
 /*General*/
 header {
@@ -78,7 +80,7 @@ main section > div {
 }
 
 /*Imagen*/
-main img { /*Me gustaría que fuera un mapa pero no sé cómo*/
+main img { 
     width: 500px;
     height: auto; 
 }
@@ -90,6 +92,36 @@ main p {
     margin-top: 37px;
     margin-bottom: 15px; 
     line-height: 1.7; 
+}
+
+
+/*INDEX/INICIO*/
+.marca{
+    display: block;
+}
+.marca img {
+    width: 100%;
+}
+
+.temporada img{
+    margin: auto;
+    width: 90%;
+    height: auto;
+    margin-bottom: 70px;
+}
+.seccion{
+    margin-bottom: 60px;
+}
+.seccion p{
+    display: grid;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 600;
+}
+.seccion img{
+    width: 90%;
+    border: 1px solid black;;
 }
 
 /*CONTACTO*/
@@ -135,7 +167,7 @@ main form a{
 
 /*GUÍA DE TALLES*/
 .tablas{
-        margin-left: 12%;
+    margin-left: 12%;
 }
 table {
     border-collapse: collapse;
