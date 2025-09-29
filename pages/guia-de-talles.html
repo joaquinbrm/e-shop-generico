@@ -9,7 +9,7 @@
 <body>
     <header>
         <div>
-            <img src="../assets/logo.jpg">
+            <img src="../assets/logo.jpg" alt="Logo de Indumentaria's">
             <p>Indumentaria's</p>
         </div>
         <nav>
@@ -20,19 +20,24 @@
                 <li><a href="./envios.html" class="navegar">Envíos</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="search">
-            <a href="#"><img src="../assets/lupa.png"></a>
-            <a href="#"><img src="../assets/carrito.png"></a>
-        </div>
+        <form action="/search" method="get">
+            <label for="search-header" class="sr-only">Buscar productos</label>
+            <input type="search" id="search-header" name="q" placeholder="Buscar">
+            <button type="submit">
+                <img src="../assets/lupa.png" alt="Buscar">
+            </button>
+            <a href="#">
+                <img src="../assets/carrito.png" alt="Ver carrito de compras">
+            </a>
+        </form>
     </header>
     <main>
         <section>
-            <h1>Guía de talles.</h1>
+            <h1>Guía de Talles.</h1>
 
             <div>
                 <div class="tablas">
-                    <h2>Parte superior</h2>
+                    <h2>Parte superior (Medidas en Centímetros)</h2> 
                     <table>
                         <thead>
                             <tr>
@@ -45,54 +50,54 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Pecho</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
+                                <td>Pecho (cm)</td>
+                                <td>88</td>
+                                <td>96</td>
+                                <td>104</td>
+                                <td>112</td>
                             </tr>
                             <tr>
-                                <td>Largo</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
+                                <td>Largo (cm)</td>
+                                <td>68</td>
+                                <td>70</td>
+                                <td>72</td>
+                                <td>74</td>
                             </tr>
                         </tbody>
                     </table>
 
-                    <h2>Parte inferior</h2>
+                    <h2>Parte inferior (Medidas en Centímetros)</h2>
                     <table>
                         <thead>
                             <tr>
                                 <th>Talle</th>
-                                <th>S</th>
-                                <th>M</th>
-                                <th>L</th>
-                                <th>XL</th>
+                                <th>S (38)</th>
+                                <th>M (42)</th>
+                                <th>L (46)</th>
+                                <th>XL (50)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Cintura</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
+                                <td>Cintura (cm)</td>
+                                <td>76</td>
+                                <td>84</td>
+                                <td>92</td>
+                                <td>100</td>
                             </tr>
                             <tr>
-                                <td>Largo</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
-                                <td>3.1415</td>
+                                <td>Cadera (cm)</td>
+                                <td>92</td>
+                                <td>100</td>
+                                <td>108</td>
+                                <td>116</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div>
-                    <img id="medidas" src="../assets/talles.jpeg">
+                    <img id="medidas" src="../assets/talles.jpeg" alt="Ilustración mostrando cómo medir pecho, cintura y cadera para tomar el talle">
                 </div>
             </div>
         </section>
@@ -103,28 +108,28 @@
             <div>
                 <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="#"><img src="../assets/instagram.png"></a></li>
-                    <li><a href="#"><img src="../assets/facebook.png"></a></li>
-                    <li><a href="#"><img src="../assets/tiktok.png"></a></li>
-                    <li><a href="#"><img src="../assets/whatsapp.png"></a></li>
+                    <li><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram"></a></li>
+                    <li><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook"></a></li>
+                    <li><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok"></a></li>
+                    <li><a href="#"><img src="../assets/whatsapp.png" alt="Ícono de WhatsApp"></a></li>
                 </ul>
             </div>
             <div>
                 <h3>Información</h3>
                 <ul>
-                    <li><a href="./contacto.html" class="navegar">Contacto</a></li>
-                    <li><a href="../index.html" class="navegar">Inicio</a></li>
-                    <li><a href="./productos.html" class="navegar">Productos</a></li>
-                    <li><a href="./envios.html" class="navegar">Envíos</a></li>
+                    <li><a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="./guia-de-talles.html">Guía de Talles</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./envios.html">Envíos</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Medios de pago</h3>
                 <ul>
-                    <li><img src="../assets/visa.png"></li>
-                    <li><img src="../assets/mastercard.png"></li>
-                    <li><img src="../assets/amex.png"></li>
-                    <li><img src="../assets/mercadopago.png"></li>
+                    <li><img src="../assets/visa.png" alt="Logo de Visa"></li>
+                    <li><img src="../assets/mastercard.png" alt="Logo de Mastercard"></li>
+                    <li><img src="../assets/amex.png" alt="Logo de American Express"></li>
+                    <li><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago"></li>
                 </ul>
             </div>
         </div>

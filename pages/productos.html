@@ -9,7 +9,7 @@
 <body>
     <header>
         <div>
-            <img src="../assets/logo.jpg">
+            <img src="../assets/logo.jpg" alt="Logo de Indumentaria's">
             <p>Indumentaria's</p>
         </div>
         <nav>
@@ -20,98 +20,151 @@
                 <li><a href="./envios.html" class="navegar">Envíos</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="search">
-            <a href="#"><img src="../assets/lupa.png"></a>
-            <a href="#"><img src="../assets/carrito.png"></a>
-        </div>
+        <form action="/search" method="get">
+            <label for="busqueda" class="sr-only">Buscar productos</label>
+            <input type="search" id="busqueda" name="q" placeholder="Buscar...">
+            <button type="submit">
+                <img src="../assets/lupa.png" alt="Icono de lupa para buscar">
+            </button>
+            <a href="#">
+                <img src="../assets/carrito.png" alt="Ver carrito de compras">
+            </a>
+        </form>
     </header>
 
     <main>
+
         <section class="prods">
+
             <aside>
-                <h2>FILTROS</h2>
-                <div>
-                    <select>
-                        <option>Relevancia</option>
-                        <option>Menor precio</option>
-                        <option>Mayor precio</option>
-                    </select>
-                </div>
-                <div>
-                    <input type="number" placeholder="min." class="filter-input-price">
-                    <input type="number" placeholder="max." class="filter-input-price">
-                </div>
-                <div>
-                    <select>
-                        <option>Categorías</option>
-                    </select>
-                </div>
-                <div>
-                    <select>
-                        <option>Prendas</option>
-                    </select>
-                </div>
-                <div>
-                    <select>
-                        <option>Colores</option>
-                    </select>
-                </div>
-                <div>
-                    <select>
-                        <option>Talle</option>
-                    </select>
-                </div>
-            </aside>
-            <div class="productos">
+                <form action="/filter" method="get">
+                    <h2>FILTROS</h2>
+                    
                     <div>
-                        <img src="../assets/jean.jpg">
+                        <label for="ordenar" class="sr-only">Ordenar por:</label>
+                        <select id="ordenar" name="sort">
+                            <option>Relevancia</option>
+                            <option>Menor precio</option>
+                            <option>Mayor precio</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="min-price" class="sr-only">Precio Mínimo</label>
+                        <input type="number" id="min-price" name="min_price" placeholder="min." class="filter-input-price">
+                        <label for="max-price" class="sr-only">Precio Máximo</label>
+                        <input type="number" id="max-price" name="max_price" placeholder="max." class="filter-input-price">
+                    </div>
+
+                    <div>
+                        <label for="categorias" class="sr-only">Categorías</label>
+                        <select id="categorias" name="category">
+                            <option>Categorías</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="prendas" class="sr-only">Prendas</label>
+                        <select id="prendas" name="item">
+                            <option>Prendas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="colores" class="sr-only">Colores</label>
+                        <select id="colores" name="color">
+                            <option>Colores</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="talle" class="sr-only">Talle</label>
+                        <select id="talle" name="size">
+                            <option>Talle</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Aplicar Filtros</button>
+                </form>
+
+            </aside>
+
+            <div class="productos">
+                <article>
+                    <a href="./detalle-producto.html?id=jean-montana">
+                        <img src="../assets/jean.jpg" alt="Jean femenino. Nombre: Montaña">
                         <p>Jean "Montaña"</p>
                         <p>$45.000</p>
-                    </div>
-                    <div>
-                        <img src="../assets/musculosa.jpg">
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=musculosa-sierra">
+                        <img src="../assets/musculosa.jpg" alt="Musculosa femenina. Nombre: Sierra">
                         <p>Musculosa "Sierra"</p>
                         <p>$25.000</p>
-                    </div>
-                    <div>
-                        <img src="../assets/short.jpg">
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=short-monte">
+                        <img src="../assets/short.jpg" alt="Short femenino. Nombre: Monte">
                         <p>Short "Monte"</p>
                         <p>$30.000</p>
-                    </div>
-                                <div>
-                    <img src="../assets/chaleco.jpg">
-                    <p>Chaleco "Lago"</p>
-                    <p>$50.000</p>
-                    </div>
-                    <div>
-                        <img src="../assets/camisa.jpg">
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=chaleco-lago">
+                        <img src="../assets/chaleco.jpg" alt="Chaleco masculino. Nombre: Lago">
+                        <p>Chaleco "Lago"</p>
+                        <p>$50.000</p>
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=camisa-rio">
+                        <img src="../assets/camisa.jpg" alt="Camisa femenina. Nombre: Río">
                         <p>Camisa "Río"</p>
                         <p>$50.000</p>
-                    </div>
-                    <div>
-                        <img src="../assets/campera.jpg">
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=campera-oceano">
+                        <img src="../assets/campera.jpg" alt="Campera masculina. Nombre: Océano">
                         <p>Campera "Océano"</p>
                         <p>$70.000</p>
-                    </div>
-                                                <div>
-                    <img src="../assets/top.jpg">
-                    <p>Top "Selva"</p>
-                    <p>$50.000</p>
-                    </div>
-                    <div>
-                        <img src="../assets/vestido.jpg">
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=top-selva">
+                        <img src="../assets/top.jpg" alt="Top femenino. Nombre: Selva">
+                        <p>Top "Selva"</p>
+                        <p>$50.000</p>
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=vestido-bosque">
+                        <img src="../assets/vestido.jpg" alt="Vestido femenino. Nombre: Bosque">
                         <p>Vestido "Bosque"</p>
                         <p>$50.000</p>
-                    </div>
-                    <div>
-                        <img src="../assets/trench.jpg">
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="./detalle-producto.html?id=trench-tundra">
+                        <img src="../assets/trench.jpg" alt="Trench femenino. Nombre: Tundra">
                         <p>Trench "Tundra"</p>
                         <p>$70.000</p>
-                    </div>
+                    </a>
+                </article>
             </div>
         </section>
-        <h3><a href="./productos.html">VER MÁS</a></h3>
+        
+        <button>
+            <a id="ver_mas" href="./pages/productos.html">VER MÁS ARTÍCULOS</a>
+        </button>
+
     </main>
 
     <footer>
@@ -119,10 +172,10 @@
             <div>
                 <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="#"><img src="../assets/instagram.png"></a></li>
-                    <li><a href="#"><img src="../assets/facebook.png"></a></li>
-                    <li><a href="#"><img src="../assets/tiktok.png"></a></li>
-                    <li><a href="#"><img src="../assets/whatsapp.png"></a></li>
+                    <li><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram"></a></li>
+                    <li><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook"></a></li>
+                    <li><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok"></a></li>
+                    <li><a href="#"><img src="../assets/whatsapp.png" alt="Ícono de WhatsApp"></a></li>
                 </ul>
             </div>
             <div>
@@ -137,10 +190,10 @@
             <div>
                 <h3>Medios de pago</h3>
                 <ul>
-                    <li><img src="../assets/visa.png"></li>
-                    <li><img src="../assets/mastercard.png"></li>
-                    <li><img src="../assets/amex.png"></li>
-                    <li><img src="../assets/mercadopago.png"></li>
+                    <li><img src="../assets/visa.png" alt="Logo de Visa"></li>
+                    <li><img src="../assets/mastercard.png" alt="Logo de Mastercard"></li>
+                    <li><img src="../assets/amex.png" alt="Logo de American Express"></li>
+                    <li><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago"></li>
                 </ul>
             </div>
         </div>

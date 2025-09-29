@@ -9,7 +9,7 @@
 <body>
     <header>
         <div>
-            <img src="../assets/logo.jpg">
+            <img src="../assets/logo.jpg" alt="Logo de Indumentaria's">
             <p>Indumentaria's</p>
         </div>
         <nav>
@@ -20,52 +20,49 @@
                 <li><a href="./envios.html" class="navegar">Envíos</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="search">
-            <a href="#"><img src="../assets/lupa.png"></a>
-            <a href="#"><img src="../assets/carrito.png"></a>
-        </div>
+        <form action="/search" method="get">
+            <label for="search-header" class="sr-only">Buscar productos</label>
+            <input type="search" id="search-header" name="q" placeholder="Buscar">
+            <button type="submit">
+                <img src="../assets/lupa.png" alt="Buscar">
+            </button>
+            <a href="#">
+                <img src="../assets/carrito.png" alt="Ver carrito de compras">
+            </a>
+        </form>
     </header>
     <main>
         <section>
             <h1>Respondemos tus preguntas frecuentes.</h1>
 
             <div class="preguntas">
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-                <div>
-                    <h3>Pregunta</h3>
-                    <p>Respuestarespuestarespuesta</p>
-                </div>
-            </div>
+                
+                <details>
+                    <summary>¿Qué métodos de pago aceptan?</summary>
+                    <p>Aceptamos todas las tarjetas de crédito y débito. También podés pagar mediante transferencia bancaria con un 10% de descuento o en efectivo en nuestro local.</p>
+                </details>
 
-            <h3>¿No aparece tu pregunta? <a href="contacto.html">Contactanos.</a></h3>
+                <details>
+                    <summary>¿Cuánto cuesta el envío?</summary>
+                    <p>El costo de envío se calcula automáticamente en el carrito al ingresar tu código postal. ¡Recordá que los envíos son gratuitos en compras superiores a $500.000!</p>
+                </details>
+
+                <details>
+                    <summary>¿Puedo cambiar o devolver un producto?</summary>
+                    <p>Sí. Tenés 30 días desde la recepción del producto para realizar cambios o devoluciones. El producto debe estar sin uso y con las etiquetas originales. </p>
+                </details>
+
+                <details>
+                    <summary>¿Cómo sé cuál es mi talle?</summary>
+                    <p>Te recomendamos visitar nuestra <a href="./guia-de-talles.html">Guía de Talles</a>, donde encontrarás tablas de medidas exactas para la parte superior e inferior.</p>
+                </details>
+
+                <details>
+                    <summary>¿Hay stock de todos los productos que veo?</summary>
+                    <p>Sí, si el producto está visible en nuestra web, significa que tenemos stock disponible en nuestro depósito. Si buscas un talle específico agotado, <a href="./contacto.html">contáctanos</a> para consultar la reposición.</p>
+                </details>
+
+            <h2>¿No aparece tu pregunta? <a href="contacto.html">Contactanos.</a></h2>
         </section>
     </main>
     <footer>
@@ -73,10 +70,10 @@
             <div>
                 <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="#"><img src="../assets/instagram.png"></a></li>
-                    <li><a href="#"><img src="../assets/facebook.png"></a></li>
-                    <li><a href="#"><img src="../assets/tiktok.png"></a></li>
-                    <li><a href="#"><img src="../assets/whatsapp.png"></a></li>
+                    <li><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram"></a></li>
+                    <li><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook"></a></li>
+                    <li><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok"></a></li>
+                    <li><a href="#"><img src="../assets/whatsapp.png" alt="Ícono de WhatsApp"></a></li>
                 </ul>
             </div>
             <div>
@@ -91,10 +88,10 @@
             <div>
                 <h3>Medios de pago</h3>
                 <ul>
-                    <li><img src="../assets/visa.png"></li>
-                    <li><img src="../assets/mastercard.png"></li>
-                    <li><img src="../assets/amex.png"></li>
-                    <li><img src="../assets/mercadopago.png"></li>
+                    <li><img src="../assets/visa.png" alt="Logo de Visa"></li>
+                    <li><img src="../assets/mastercard.png" alt="Logo de Mastercard"></li>
+                    <li><img src="../assets/amex.png" alt="Logo de American Express"></li>
+                    <li><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago"></li>
                 </ul>
             </div>
         </div>

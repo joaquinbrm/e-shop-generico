@@ -9,7 +9,7 @@
 <body>
     <header>
         <div>
-            <img src="../assets/logo.jpg">
+            <img src="../assets/logo.jpg" alt="Logo de Indumentaria's">
             <p>Indumentaria's</p>
         </div>
         <nav>
@@ -20,24 +20,29 @@
                 <li><a href="./envios.html" class="navegar">Envíos</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="search">
-            <a href="#"><img src="../assets/lupa.png"></a>
-            <a href="#"><img src="../assets/carrito.png"></a>
-        </div>
+        <form action="/search" method="get">
+            <label for="search-header" class="sr-only">Buscar productos</label>
+            <input type="search" id="search-header" name="q" placeholder="Buscar">
+            <button type="submit">
+                <img src="../assets/lupa.png" alt="Buscar">
+            </button>
+            <a href="#">
+                <img src="../assets/carrito.png" alt="Ver carrito de compras">
+            </a>
+        </form>
     </header>
 
     <main>
         <section>
             <h1>Recibí tu producto.</h1>
             <div>
-                <img src="../assets/mapa.png">
+                <img src="../assets/mapa.png" alt="Ilustración de un mapa de distribución">
                 <div>
                     <p>Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. Quod si tibi tantum sit propria et aliena quale sit, nemo unquam vel invitum te continebis.</p>
-                    <p>En compras mayores a $500.000, raeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et ne illa laederentur.</p>
+                    <p>En compras mayores a **$500.000**, raeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et ne illa laederentur.</p>
                     <p>Tanta petere igitur, ne sineres memini fieri etiam aliquam inclinationem ad consequendum minima. Instead, oportet</p>
                     <p>Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. Quod si tibi tantum sit propria et aliena quale sit, nemo unquam vel invitum te continebis.</p>
-                    <p>En compras mayores a $500.000, raeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et ne illa laederentur.</p>
+                    <p>En compras mayores a **$500.000**, raeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et ne illa laederentur.</p>
                     <p>Tanta petere igitur, ne sineres memini fieri etiam aliquam inclinationem ad consequendum minima. Instead, oportet</p>
                 </div>
             </div>
@@ -49,10 +54,10 @@
             <div>
                 <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="#"><img src="../assets/instagram.png"></a></li>
-                    <li><a href="#"><img src="../assets/facebook.png"></a></li>
-                    <li><a href="#"><img src="../assets/tiktok.png"></a></li>
-                    <li><a href="#"><img src="../assets/whatsapp.png"></a></li>
+                    <li><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram"></a></li>
+                    <li><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook"></a></li>
+                    <li><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok"></a></li>
+                    <li><a href="#"><img src="../assets/whatsapp.png" alt="Ícono de WhatsApp"></a></li>
                 </ul>
             </div>
             <div>
@@ -67,10 +72,10 @@
             <div>
                 <h3>Medios de pago</h3>
                 <ul>
-                    <li><img src="../assets/visa.png"></li>
-                    <li><img src="../assets/mastercard.png"></li>
-                    <li><img src="../assets/amex.png"></li>
-                    <li><img src="../assets/mercadopago.png"></li>
+                    <li><img src="../assets/visa.png" alt="Logo de Visa"></li>
+                    <li><img src="../assets/mastercard.png" alt="Logo de Mastercard"></li>
+                    <li><img src="../assets/amex.png" alt="Logo de American Express"></li>
+                    <li><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago"></li>
                 </ul>
             </div>
         </div>

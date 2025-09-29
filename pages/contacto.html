@@ -9,7 +9,7 @@
 <body>
     <header>
         <div>
-            <img src="../assets/logo.jpg">
+            <img src="../assets/logo.jpg" alt="Logo de Indumentaria's">
             <p>Indumentaria's</p>
         </div>
         <nav>
@@ -20,36 +20,47 @@
                 <li><a href="./envios.html" class="navegar">Envíos</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="search">
-            <a href="#"><img src="../assets/lupa.png"></a>
-            <a href="#"><img src="../assets/carrito.png"></a>
-        </div>
+        <form action="/search" method="get">
+            <label for="search-header" class="sr-only">Buscar</label> 
+            <input type="search" id="search-header" name="q">
+            <button type="submit">
+                <img src="../assets/lupa.png" alt="Buscar">
+            </button>
+            <a href="#">
+                <img src="../assets/carrito.png" alt="Ver carrito de compras">
+            </a>
+        </form>
     </header>
 
     <main>
         <section>
-            <h1>Contactanos con tu consulta por el medio que prefieras.</h1>
+            <h1>Contáctanos con tu consulta por el medio que prefieras.</h1>
 
             <div>
                 <div>
                     <h2>WhatsApp</h2>
-                    <img class="qr" src="../assets/qr.jpg">
+                    <img class="qr" src="../assets/qr.jpg" alt="Código QR para contactar por WhatsApp">
                 </div>
 
                 <div>
                     <h2>Correo Electrónico</h2>
-                    <form>
-                        <input type="text" placeholder="Nombre*">
-                        <input type="email" placeholder="Email*">
-                        <textarea placeholder="Mensaje"></textarea>
-                        <a href="#">Enviar</a>
+                    <form action="/submit-contact" method="post">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        
+                        <button type="submit">Enviar</button>
                     </form>
                 </div>
 
                 <div>
                     <h2>Nuestro Local</h2>
-                    <img src="../assets/mapa.png">
+                    <img src="../assets/mapa.png" alt="Mapa de ubicación de nuestro local">
                 </div>
             </div>
         </section>
@@ -60,10 +71,10 @@
             <div>
                 <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="#"><img src="../assets/instagram.png"></a></li>
-                    <li><a href="#"><img src="../assets/facebook.png"></a></li>
-                    <li><a href="#"><img src="../assets/tiktok.png"></a></li>
-                    <li><a href="#"><img src="../assets/whatsapp.png"></a></li>
+                    <li><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram"></a></li>
+                    <li><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook"></a></li>
+                    <li><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok"></a></li>
+                    <li><a href="#"><img src="../assets/whatsapp.png" alt="Ícono de WhatsApp"></a></li>
                 </ul>
             </div>
             <div>
@@ -78,10 +89,10 @@
             <div>
                 <h3>Medios de pago</h3>
                 <ul>
-                    <li><img src="../assets/visa.png"></li>
-                    <li><img src="../assets/mastercard.png"></li>
-                    <li><img src="../assets/amex.png"></li>
-                    <li><img src="../assets/mercadopago.png"></li>
+                    <li><img src="../assets/visa.png" alt="Logo de Visa"></li>
+                    <li><img src="../assets/mastercard.png" alt="Logo de Mastercard"></li>
+                    <li><img src="../assets/amex.png" alt="Logo de American Express"></li>
+                    <li><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago"></li>
                 </ul>
             </div>
         </div>

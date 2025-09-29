@@ -7,7 +7,7 @@ body{
 /*-------------------------HEADER------------------------- */
 /*General*/
 header {
-    background-color: rgba(0, 204, 255, 0.404);
+    background-color: rgba(131, 156, 163, 0.404);
     padding: 0px 40px;
     font-size: 18px;
     display: flex;
@@ -139,7 +139,7 @@ h3 a{
 }
 aside{
     text-align: center;
-    background-color: rgba(0, 204, 255, 0.404);
+    background-color: rgba(131, 156, 163, 0.404);
 }
 aside input{
     width: 50px;
@@ -231,7 +231,7 @@ th, td {
 /*-------------------------FOOTER------------------------- */
 /*General*/
 footer {
-    background-color: rgba(0, 204, 255, 0.404); /* Fondo del footer */
+    background-color: rgba(131, 156, 163, 0.404); /* Fondo del footer */
     padding: 25px; /* Espaciado interno general */
     font-size: 18px;
     text-align: center;
