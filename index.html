@@ -1,142 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Indumentarias</title>
 </head>
+
 <body>
 
+    <header class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-3 d-flex align-items-center">
+                <img id="logo" src="./assets/logo.jpg" alt="Logo de Indumentaria's" class="me-2">
+                <p class="nombre_marca">Indumentaria's</p>
+            </div>
 
-    <header>
+            <nav class="col-md-6">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a href="./pages/contacto.html" class="nav-link navegar">Contacto</a></li>
+                    <li class="nav-item"><a href="./index.html" class="nav-link navegar">Inicio</a></li>
+                    <li class="nav-item"><a href="./pages/productos.html" class="nav-link navegar">Productos</a></li>
+                    <li class="nav-item"><a href="./pages/envios.html" class="nav-link navegar">Envíos</a></li>
+                </ul>
+            </nav>
 
-        <div>
-            <img src="../assets/logo.jpg" alt="Logo de Indumentaria's">
-            <p>Indumentaria's</p>
+            <form action="/search" method="get" class="col-md-3 d-flex align-items-center">
+                <input type="search" placeholder="Buscar" class="form-control me-2">
+                <button type="submit" class="btn btn-outline-secondary">
+                    <img src="./assets/lupa.png" alt="buscar" width="20">
+                </button>
+                <a href="#" class="ms-2">
+                    <img src="./assets/carrito.png" alt="carrito de compras" width="30">
+                </a>
+            </form>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="./pages/contacto.html" class="navegar">Contacto</a></li>
-                <li><a href="./index.html" class="navegar">Inicio</a></li>
-                <li><a href="./pages/productos.html" class="navegar">Productos</a></li>
-                <li><a href="./pages/envios.html" class="navegar">Envíos</a></li>
-            </ul>
-        </nav>
-
-        <form action="/search" method="get">
-            <label for="search-input">Buscar productos</label>
-            <input type="search" placeholder="Buscar">
-            <button type="submit">
-                <img src="../assets/lupa.png" alt="buscar">
-            </button>
-            <a href="#"> <!--Uno es un button y otro es un a porque la lupa redirige en base a la info que le da la barrita-->
-                <img src="../assets/carrito.png" alt="carrito de compras">
-            </a>
-        </form>
-
     </header>
 
 
-    <main>
+    <main class="container">
 
-        <section class="marca">
-            <h1>INDUMENTARIA'S</h1>
+        <section class="marca text-center">
+            <h1 class="display-4">INDUMENTARIA'S</h1>
         </section>
 
-        <section class="temporada">
-            <h2>NUEVA TEMPORADA</h2>
+        <section class="temporada text-center">
+            <h2 class="mb-4">NUEVA TEMPORADA</h2>
             <div>
-                <img src="./assets/temporada1.jpg" alt="banner temporada primavera-verano 2026">
+                <img src="./assets/temporada1.jpg" alt="banner temporada primavera-verano 2026" class="img-fluid">
             </div>
         </section>
 
         <section class="seccion">
-            <h2>DESTACADOS</h2>
-            <div>
-                <div>
-                    <img src="./assets/camisa.jpg" alt="Camisa femenina. Nombre: Montaña">
-                    <p class="nombre_producto">Jean "Montaña"</p>
-                    <p class="precio">$45.000</p>
+            <h2 class="text-center">DESTACADOS</h2>
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <img src="./assets/camisa.jpg" class="card-img-top" alt="Camisa femenina. Nombre: Montaña">
+                        <div class="card-body">
+                            <p class="card-text nombre_producto">Jean "Montaña"</p>
+                            <p class="card-text precio ">$45.000</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./assets/musculosa.jpg" alt="Musculosa femenina. Nombre: Sierra">
-                    <p class="nombre_producto">Musculosa "Sierra"</p>
-                    <p class="precio">$25.000</p>
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <img src="./assets/musculosa.jpg" class="card-img-top" alt="Musculosa femenina. Nombre: Sierra">
+                        <div class="card-body">
+                            <p class="card-text nombre_producto">Musculosa "Sierra"</p>
+                            <p class="card-text precio ">$25.000</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./assets/short.jpg" alt="Short femenino. Nombre: Monte">
-                    <p class="nombre_producto">Short "Monte"</p>
-                    <p class="precio">$30.000</p>
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <img src="./assets/short.jpg" class="card-img-top" alt="Short femenino. Nombre: Monte">
+                        <div class="card-body">
+                            <p class="card-text nombre_producto">Short "Monte"</p>
+                            <p class="card-text precio ">$30.000</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="seccion">
-            <h2>LIQUIDACIÓN</h2>
-            <div>
-                <div>
-                    <img src="./assets/chaleco.jpg" alt="Chaleco masculino. Nombre: Lago">
-                    <p class="nombre_producto">Chaleco "Lago"</p>
-                    <p class="precio">$50.000</p>
+            <h2 class="text-center">LIQUIDACIÓN</h2>
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <img src="./assets/chaleco.jpg" class="card-img-top" alt="Chaleco masculino. Nombre: Lago">
+                        <div class="card-body">
+                            <p class="card-text nombre_producto">Chaleco "Lago"</p>
+                            <p class="card-text precio ">$50.000</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./assets/jean.jpg" alt="Jean masculino. Nombre: Río">
-                    <p class="nombre_producto">Jean "Río"</p>
-                    <p class="precio">$50.000</p>
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <img src="./assets/jean.jpg" class="card-img-top" alt="Jean masculino. Nombre: Río">
+                        <div class="card-body">
+                            <p class="card-text nombre_producto">Jean "Río"</p>
+                            <p class="card-text precio ">$50.000</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./assets/campera.jpg" alt="Campera masculina. Nombre: Océano">
-                    <p class="nombre_producto">Campera "Océano"</p>
-                    <p class="precio">$70.000</p>
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <img src="./assets/campera.jpg" class="card-img-top" alt="Campera masculina. Nombre: Océano">
+                        <div class="card-body">
+                            <p class="card-text nombre_producto">Campera "Océano"</p>
+                            <p class="card-text precio ">$70.000</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <button>
-            <a id="ver_todo" href="./pages/productos.html">VER TODOS LOS ARTÍCULOS</a>
-        </button>
+        <div class="text-center">
+            <a href="./pages/productos.html" class="btn btn-primary btn-lg" id="ver_todo">VER TODOS LOS ARTÍCULOS</a>
+        </div>
 
     </main>
 
-
     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Redes Sociales</h3>
+                    <ul class="list-unstyled d-flex">
+                        <li class="rrss me-3"><a href="#"><img src="./assets/instagram.png" alt="Ícono de Instagram" width="30"></a></li>
+                        <li class="rrss me-3"><a href="#"><img src="./assets/facebook.png" alt="Ícono de Facebook" width="30"></a></li>
+                        <li class="rrss me-3"><a href="#"><img src="./assets/tiktok.png" alt="Ícono de TikTok" width="30"></a></li>
+                        <li class="rrss me-3"><a href="#"><img src="./assets/whatsapp.png" alt="Ícono de WhatsApp" width="30"></a></li>
+                    </ul>
+                </div>
 
-        <div>
-            <div>
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li class="rrss"><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram"></a></li>
-                    <li class="rrss"><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook"></a></li>
-                    <li class="rrss"><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok"></a></li>
-                    <li class="rrss"><a href="#"><img src="../assets/whatsapp.png" alt="Ícono de WhatsApp"></a></li>
-                </ul>
+                <div class="col-md-4">
+                    <h3>Información</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="./pages/preguntas-frecuentes.html" class="text-white">Preguntas Frecuentes</a></li>
+                        <li><a href="./pages/guia-de-talles.html" class="text-white">Guía de Talles</a></li>
+                        <li><a href="./pages/contacto.html" class="text-white">Contacto</a></li>
+                        <li><a href="./pages/envios.html" class="text-white">Envíos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Medios de pago</h3>
+                    <ul class="list-unstyled d-flex">
+                        <li class="me-2"><img src="./assets/visa.png" alt="Logo de Visa" width="40"></li>
+                        <li class="me-2"><img src="./assets/mastercard.png" alt="Logo de Mastercard" width="40"></li>
+                        <li class="me-2"><img src="./assets/amex.png" alt="Logo de American Express" width="40"></li>
+                        <li class="me-2"><img src="./assets/mercadopago.png" alt="Logo de Mercado Pago" width="40"></li>
+                    </ul>
+                </div>
             </div>
 
-            <div>
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="./pages/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
-                    <li><a href="./pages/guia-de-talles.html">Guía de Talles</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                    <li><a href="./pages/envios.html">Envíos</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Medios de pago</h3>
-                <ul>
-                    <li><img src="../assets/visa.png" alt="Logo de Visa"></li>
-                    <li><img src="../assets/mastercard.png" alt="Logo de Mastercard"></li>
-                    <li><img src="../assets/amex.png" alt="Logo de American Express"></li>
-                    <li><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago"></li>
-                </ul>
-            </div>
+            <p class="copyright text-center">© 2025 Indumentaria's. Todos los derechos reservados.</p>
         </div>
-
-        <p class="copyright">© 2025 Indumentaria's. Todos los derechos reservados.</p>
-
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
