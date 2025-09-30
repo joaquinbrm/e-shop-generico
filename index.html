@@ -8,15 +8,21 @@
     <title>Indumentarias</title>
 </head>
 
+
 <body>
+
+    <!--------------------HEADER------------------->
 
     <header class="container-fluid">
         <div class="row align-items-center">
+
+            <!--Identidad de marca-->
             <div class="col-md-3 d-flex align-items-center">
                 <img id="logo" src="./assets/logo.jpg" alt="Logo de Indumentaria's" class="me-2">
                 <p class="nombre_marca">Indumentaria's</p>
             </div>
-
+            
+            <!--Navegación interna-->
             <nav class="col-md-6">
                 <ul class="nav justify-content-center">
                     <li class="nav-item"><a href="./pages/contacto.html" class="nav-link navegar">Contacto</a></li>
@@ -26,32 +32,37 @@
                 </ul>
             </nav>
 
+            <!--Barra de úsqueda y carrito-->
             <form action="/search" method="get" class="col-md-3 d-flex align-items-center">
                 <input type="search" placeholder="Buscar" class="form-control me-2">
                 <button type="submit" class="btn btn-outline-secondary">
                     <img src="./assets/lupa.png" alt="buscar" width="20">
                 </button>
-                <a href="#" class="ms-2">
-                    <img src="./assets/carrito.png" alt="carrito de compras" width="30">
+                <a href="#" class="ms-2"> <!--Lo entiendo como parte del formulario porque no muestra siempre lo mismo-->
+                    <img src="./assets/carrito.png" alt="carrito de compras" width="30"> 
                 </a>
             </form>
+
         </div>
     </header>
 
-
+    <!--------------------MAIN------------------->
     <main class="container">
 
+        <!--Nombre de marca-->
         <section class="marca text-center">
             <h1 class="display-4">INDUMENTARIA'S</h1>
         </section>
 
+        <!--Nueva temporada-->
         <section class="temporada text-center">
             <h2 class="mb-4">NUEVA TEMPORADA</h2>
             <div>
                 <img src="./assets/temporada1.jpg" alt="banner temporada primavera-verano 2026" class="img-fluid">
             </div>
         </section>
-
+        
+        <!--Destacados-->
         <section class="seccion">
             <h2 class="text-center">DESTACADOS</h2>
             <div class="row">
@@ -85,6 +96,7 @@
             </div>
         </section>
 
+        <!--Liquidación-->
         <section class="seccion">
             <h2 class="text-center">LIQUIDACIÓN</h2>
             <div class="row">
@@ -118,15 +130,21 @@
             </div>
         </section>
 
+        <!--Ver más (lleva a productos)-->
         <div class="text-center">
             <a href="./pages/productos.html" class="btn btn-primary btn-lg" id="ver_todo">VER TODOS LOS ARTÍCULOS</a>
         </div>
 
     </main>
 
+    <!--------------------FOOTER------------------->
+
     <footer>
         <div class="container">
-            <div class="row">
+
+            <div class="row"> <!--Para diferenciarlo del copyright-->
+
+                <!--RRSS-->
                 <div class="col-md-4">
                     <h3>Redes Sociales</h3>
                     <ul class="list-unstyled d-flex">
@@ -136,7 +154,8 @@
                         <li class="rrss me-3"><a href="#"><img src="./assets/whatsapp.png" alt="Ícono de WhatsApp" width="30"></a></li>
                     </ul>
                 </div>
-
+                
+                <!--Navegación interna-->
                 <div class="col-md-4">
                     <h3>Información</h3>
                     <ul class="list-unstyled">
@@ -147,6 +166,7 @@
                     </ul>
                 </div>
 
+                <!--Medios de pago-->
                 <div class="col-md-4">
                     <h3>Medios de pago</h3>
                     <ul class="list-unstyled d-flex">
@@ -158,10 +178,12 @@
                 </div>
             </div>
 
+            <!--Copyright-->
             <p class="copyright text-center">© 2025 Indumentaria's. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <!--Bootstrap 5.3.8-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
