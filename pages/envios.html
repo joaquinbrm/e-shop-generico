@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Envíos - Indumentaria's</title>
 </head>
+
+
 <body>
+
+    <!--------------------HEADER------------------->
+    
     <header class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-3 d-flex align-items-center">
@@ -27,7 +32,7 @@
             <form action="/search" method="get" class="col-md-3 d-flex align-items-center">
                 <label for="search-header" class="visually-hidden">Buscar productos</label>
                 <input type="search" id="search-header" name="q" placeholder="Buscar" class="form-control me-2">
-                <button type="submit" class="btn btn-outline-secondary">
+                <button type="submit" class="btn">
                     <img src="../assets/lupa.png" alt="Buscar" width="20">
                 </button>
                 <a href="#" class="ms-2">
@@ -49,19 +54,21 @@
                     <p>En compras mayores a **$500.000**, raeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et ne illa laederentur.</p>
                     <p>Tanta petere igitur, ne sineres memini fieri etiam aliquam inclinationem ad consequendum minima. Instead, oportet</p>
                     <p>Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. Quod si tibi tantum sit propria et aliena quale sit, nemo unquam vel invitum te continebis.</p>
-                    <p>En compras mayores a **$500.000**, raeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et ne illa laederentur.</p>
-                    <p>Tanta petere igitur, ne sineres memini fieri etiam aliquam inclinationem ad consequendum minima. Instead, oportet</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!--------------------FOOTER------------------->
+
+   
     <footer>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
+
                 <div class="col-md-4">
                     <h3>Redes Sociales</h3>
-                    <ul class="list-unstyled d-flex">
+                    <ul class="iconos list-unstyled d-flex">
                         <li class="rrss me-3"><a href="#"><img src="../assets/instagram.png" alt="Ícono de Instagram" width="30"></a></li>
                         <li class="rrss me-3"><a href="#"><img src="../assets/facebook.png" alt="Ícono de Facebook" width="30"></a></li>
                         <li class="rrss me-3"><a href="#"><img src="../assets/tiktok.png" alt="Ícono de TikTok" width="30"></a></li>
@@ -71,24 +78,29 @@
 
                 <div class="col-md-4">
                     <h3>Información</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="./preguntas-frecuentes.html" class="text-white">Preguntas Frecuentes</a></li>
-                        <li><a href="./guia-de-talles.html" class="text-white">Guía de Talles</a></li>
-                        <li><a href="./contacto.html" class="text-white">Contacto</a></li>
-                        <li><a href="./envios.html" class="text-white">Envíos</a></li>
+                    <ul id="enlaces" class="list-unstyled">
+                        <li class="enlace"><a href="./preguntas-frecuentes.html" class="text-white">Preguntas Frecuentes</a></li>
+                        <li class="enlace"><a href="./guia-de-talles.html" class="text-white">Guía de Talles</a></li>
+                        <li class="enlace"><a href="./contacto.html" class="text-white">Contacto</a></li>
+                        <li class="enlace"><a href="./envios.html" class="text-white">Envíos</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-4">
                     <h3>Medios de pago</h3>
-                    <ul class="list-unstyled d-flex">
+                    <ul class="iconos list-unstyled d-flex">
                         <li class="me-2"><img src="../assets/visa.png" alt="Logo de Visa" width="40"></li>
                         <li class="me-2"><img src="../assets/mastercard.png" alt="Logo de Mastercard" width="40"></li>
                         <li class="me-2"><img src="../assets/amex.png" alt="Logo de American Express" width="40"></li>
                         <li class="me-2"><img src="../assets/mercadopago.png" alt="Logo de Mercado Pago" width="40"></li>
                     </ul>
                 </div>
+                
             </div>
+
+            <p class="copyright text-center">© 2025 Indumentaria's. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
             <p class="copyright text-center">© 2025 Indumentaria's. Todos los derechos reservados.</p>
         </div>
