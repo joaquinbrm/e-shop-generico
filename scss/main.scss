@@ -1,0 +1,407 @@
+// Variables
+$color-principal: #333;
+$color-fondo: rgba(131, 156, 163, 0.404);
+$color-fondo-claro: rgba(131, 156, 163, 0.2);
+$color-hover: #000000;
+$color-hover-suave: #555454;
+$borde-color: #ddd;
+$fuente-principal: Arial, Helvetica, sans-serif;
+
+// Mixins
+@mixin centrar-texto {
+    text-align: center;
+}
+
+@mixin bordes-redondeados($radio: 5px) {
+    border-radius: $radio;
+}
+
+@mixin sombra-hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin transicion($propiedad: all, $duracion: 0.3s) {
+    transition: $propiedad $duracion ease;
+}
+
+@mixin espaciado-seccion {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+// Extends
+%link-base {
+    text-decoration: none;
+    color: $color-principal;
+}
+
+%boton-base {
+    @extend %link-base;
+    background-color: $color-fondo;
+    border: none;
+    
+    &:hover {
+        background-color: rgba(131, 156, 163, 0.205);
+    }
+}
+
+%imagen-responsive {
+    width: 100%;
+    height: auto;
+}
+
+// Estilos generales
+body {
+    font-family: $fuente-principal;
+    height: 100%;
+    color: $color-principal;
+    margin: 0;
+    padding: 0;
+}
+
+// HEADER
+header {
+    background-color: $color-fondo;
+    padding: 10px 40px;
+    font-size: 18px;
+    
+    #logo {
+        width: 60px;
+        height: 60px;
+        @include bordes-redondeados(100%);
+    }
+    
+    .nombre_marca {
+        margin: 0;
+        font-size: 25px;
+        font-weight: bold;
+        color: $color-principal;
+    }
+    
+    nav {
+        ul {
+            li {
+                a {
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+}
+
+.navegar {
+    @extend %link-base;
+    
+    &:hover {
+        color: $color-hover;
+        text-decoration: underline;
+    }
+}
+
+.card {
+    &:hover {
+        @include sombra-hover;
+    }
+}
+
+// MAIN
+main {
+    padding: 0 !important;
+    
+    section {
+        @include espaciado-seccion;
+    }
+    
+    h1 {
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+// INDEX
+.marca {
+    font-family: $fuente-principal;
+    font-weight: bolder;
+    @include centrar-texto;
+    padding: 60px 0;
+    background: linear-gradient(to bottom, $color-fondo, rgba(255, 255, 255, 0.3));
+    margin: 0;
+    overflow: hidden;
+}
+
+.temporada {
+    margin-bottom: 80px;
+}
+
+.seccion {
+    margin-bottom: 80px;
+    padding: 1%;
+    
+    .nombre_producto {
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .precio {
+        font-weight: 700;
+        font-size: 1.2em;
+        color: $color-principal;
+    }
+}
+
+// Botones
+#ver_todo,
+#ver_mas,
+#enviar_consulta {
+    @extend %boton-base;
+}
+
+// PRODUCTOS
+.prods {
+    padding: 20px 0;
+}
+
+aside {
+    background-color: $color-fondo;
+    padding: 20px;
+    @include bordes-redondeados(8px);
+    position: sticky;
+    top: 10px;
+    
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    div {
+        margin-bottom: 15px;
+    }
+    
+    input.filter-input-price {
+        width: 80px;
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    select,
+    input {
+        width: 100%;
+    }
+}
+
+#filtrador {
+    color: $color-principal;
+    font-weight: bolder;
+    background-color: rgb(255, 255, 255);
+    margin-left: 30%;
+    border: none;
+    
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.568);
+    }
+}
+
+.productos {
+    article {
+        @include centrar-texto;
+        margin-bottom: 30px;
+    }
+    
+    img {
+        @extend %imagen-responsive;
+        max-height: 450px;
+        object-fit: cover;
+        border: 1px solid $borde-color;
+        @include bordes-redondeados;
+    }
+    
+    p {
+        @include centrar-texto;
+        padding: 5px 0;
+        margin: 5px 0;
+        font-weight: 600;
+    }
+    
+    a {
+        @extend %link-base;
+        
+        &:hover {
+            color: $color-hover;
+        }
+    }
+}
+
+// CONTACTO
+main form {
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    
+    input,
+    textarea {
+        font-size: 17px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    
+    a {
+        color: $color-principal;
+        text-decoration: underline;
+        
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+// PREGUNTAS FRECUENTES
+.preguntas {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    
+    details {
+        background-color: $color-fondo-claro;
+        padding: 15px;
+        margin-bottom: 15px;
+        @include bordes-redondeados;
+        border: 1px solid rgba(131, 156, 163, 0.4);
+    }
+    
+    summary {
+        color: $color-principal;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 1.1em;
+        
+        &:hover {
+            color: $color-hover-suave;
+        }
+    }
+    
+    p {
+        margin-top: 15px;
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
+    
+    a {
+        color: $color-principal;
+        text-decoration: underline;
+    }
+}
+
+main section h2 #contactanos {
+    color: #000;
+    text-decoration: none;
+    
+    &:hover {
+        color: $color-hover-suave;
+        text-decoration: none;
+    }
+}
+
+// GUÍA DE TALLES
+.tablas {
+    margin-bottom: 30px;
+    
+    h2 {
+        text-align: left;
+        margin-top: 30px;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    @include centrar-texto;
+}
+
+th {
+    background-color: rgba(131, 156, 163, 0.3);
+    font-weight: 700;
+}
+
+#medidas {
+    margin-left: 25%;
+    width: 64%;
+}
+
+// FOOTER
+footer {
+    background-color: $color-fondo;
+    color: $color-principal;
+    padding: 40px 20px;
+    margin-top: 60px;
+    @include centrar-texto;
+    
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            margin-bottom: 8px;
+        }
+    }
+    
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+#enlaces li a {
+    @extend %link-base;
+}
+
+.iconos {
+    margin-left: 33%;
+}
+
+.copyright {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    .productos img {
+        max-height: 350px;
+    }
+    
+    aside {
+        margin-bottom: 30px;
+    }
+    
+    .tablas {
+        margin-left: 0;
+    }
+    
+    #medidas {
+        margin-right: 0;
+    }
+}

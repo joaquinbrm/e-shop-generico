@@ -1,0 +1,306 @@
+#enlaces li a, .productos a, .navegar, #ver_todo,
+#ver_mas,
+#enviar_consulta {
+  text-decoration: none;
+  color: #333;
+}
+
+#ver_todo,
+#ver_mas,
+#enviar_consulta {
+  background-color: rgba(131, 156, 163, 0.404);
+  border: none;
+}
+#ver_todo:hover,
+#ver_mas:hover,
+#enviar_consulta:hover {
+  background-color: rgba(131, 156, 163, 0.205);
+}
+
+.productos img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(131, 156, 163, 0.404);
+  padding: 10px 40px;
+  font-size: 18px;
+}
+header #logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+header .nombre_marca {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+}
+header nav ul li a {
+  color: #333;
+}
+
+.navegar:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding: 0 !important;
+}
+main section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+main h1 {
+  margin-bottom: 30px;
+}
+main h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.marca {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(to bottom, rgba(131, 156, 163, 0.404), rgba(255, 255, 255, 0.3));
+  margin: 0;
+  overflow: hidden;
+}
+
+.temporada {
+  margin-bottom: 80px;
+}
+
+.seccion {
+  margin-bottom: 80px;
+  padding: 1%;
+}
+.seccion .nombre_producto {
+  font-weight: 600;
+  margin-top: 10px;
+}
+.seccion .precio {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.prods {
+  padding: 20px 0;
+}
+
+aside {
+  background-color: rgba(131, 156, 163, 0.404);
+  padding: 20px;
+  border-radius: 8px;
+  position: sticky;
+  top: 10px;
+}
+aside h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+aside div {
+  margin-bottom: 15px;
+}
+aside input.filter-input-price {
+  width: 80px;
+  display: inline-block;
+  margin: 5px;
+}
+aside select,
+aside input {
+  width: 100%;
+}
+
+#filtrador {
+  color: #333;
+  font-weight: bolder;
+  background-color: rgb(255, 255, 255);
+  margin-left: 30%;
+  border: none;
+}
+#filtrador:hover {
+  background-color: rgba(255, 255, 255, 0.568);
+}
+
+.productos article {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.productos img {
+  max-height: 450px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.productos p {
+  text-align: center;
+  padding: 5px 0;
+  margin: 5px 0;
+  font-weight: 600;
+}
+.productos a:hover {
+  color: #000000;
+}
+
+main form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+main form input,
+main form textarea {
+  font-size: 17px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+main form a {
+  color: #333;
+  text-decoration: underline;
+}
+main form a:hover {
+  color: #000;
+}
+
+.preguntas {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.preguntas details {
+  background-color: rgba(131, 156, 163, 0.2);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(131, 156, 163, 0.4);
+}
+.preguntas summary {
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+.preguntas summary:hover {
+  color: #555454;
+}
+.preguntas p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+.preguntas a {
+  color: #333;
+  text-decoration: underline;
+}
+
+main section h2 #contactanos {
+  color: #000;
+  text-decoration: none;
+}
+main section h2 #contactanos:hover {
+  color: #555454;
+  text-decoration: none;
+}
+
+.tablas {
+  margin-bottom: 30px;
+}
+.tablas h2 {
+  text-align: left;
+  margin-top: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  background-color: rgba(131, 156, 163, 0.3);
+  font-weight: 700;
+}
+
+#medidas {
+  margin-left: 25%;
+  width: 64%;
+}
+
+footer {
+  background-color: rgba(131, 156, 163, 0.404);
+  color: #333;
+  padding: 40px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+footer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 8px;
+}
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+.iconos {
+  margin-left: 33%;
+}
+
+.copyright {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  .productos img {
+    max-height: 350px;
+  }
+  aside {
+    margin-bottom: 30px;
+  }
+  .tablas {
+    margin-left: 0;
+  }
+  #medidas {
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
