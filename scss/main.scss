@@ -162,7 +162,7 @@ main {
 
 // PRODUCTOS
 .prods {
-    padding: 20px 0;
+    padding: 20px;
 }
 
 aside {
@@ -171,6 +171,7 @@ aside {
     @include bordes-redondeados(8px);
     position: sticky;
     top: 10px;
+    max-height: 650px;
     
     h2 {
         font-size: 1.5em;
@@ -197,8 +198,10 @@ aside {
     color: $color-principal;
     font-weight: bolder;
     background-color: rgb(255, 255, 255);
-    margin-left: 30%;
+    margin-top: 10%;
+    margin-left: 27%;
     border: none;
+    border-radius: 10%;
     
     &:hover {
         background-color: rgba(255, 255, 255, 0.568);
@@ -206,17 +209,20 @@ aside {
 }
 
 .productos {
+    padding: 20px;
+
     article {
         @include centrar-texto;
-        margin-bottom: 30px;
+        margin: 7px;
+        padding:13px;
+        max-width: 31%;
     }
     
     img {
         @extend %imagen-responsive;
-        max-height: 450px;
+        max-height: 400px;
         object-fit: cover;
-        border: 1px solid $borde-color;
-        @include bordes-redondeados;
+        @include bordes-redondeados(10px);
     }
     
     p {

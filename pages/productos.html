@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Productos - Indumentaria's</title>
 </head>
-
 
 <body>
 
@@ -42,138 +42,139 @@
         </div>
     </header>
 
-    <main class="container-fluid">
+    <main class="container">
 
-        <section class="prods row">
+        <section class="prods">
+            <div class="row">
 
-            <aside class="sidebar col-md-3">
-                <form action="/filter" method="get">
-                    <h2>FILTROS</h2>
-                    
-                    <div>
-                        <label for="ordenar">Ordenar por:</label>
-                        <select id="ordenar" name="sort" class="form-select">
-                            <option>Relevancia</option>
-                            <option>Menor precio</option>
-                            <option>Mayor precio</option>
-                        </select>
+                <aside class="col-lg-3 col-md-4" data-aos="fade-right">
+                    <form action="/filter" method="get">
+                        <h2>FILTROS</h2>
+                        
+                        <div>
+                            <label for="ordenar">Ordenar por:</label>
+                            <select id="ordenar" name="sort" class="form-select">
+                                <option>Relevancia</option>
+                                <option>Menor precio</option>
+                                <option>Mayor precio</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="min-price">Precio</label>
+                            <input type="number" id="min-price" name="min_price" placeholder="min." class="form-control filter-input-price">
+                            <input type="number" id="max-price" name="max_price" placeholder="max." class="form-control filter-input-price">
+                        </div>
+
+                        <div>
+                            <label for="categorias">Categorías</label>
+                            <select id="categorias" name="category" class="form-select">
+                                <option>-</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="prendas">Prendas</label>
+                            <select id="prendas" name="item" class="form-select">
+                                <option>-</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="colores">Colores</label>
+                            <select id="colores" name="color" class="form-select">
+                                <option>-</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="talle">Talle</label>
+                            <select id="talle" name="size" class="form-select">
+                                <option>-</option>
+                            </select>
+                        </div>
+
+                        <button id="filtrador" type="submit">Aplicar Filtros</button>
+                    </form>
+                </aside>
+
+                <div class="productos col-lg-9 col-md-8">
+                    <div class="row">
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                            <a href="./detalle-producto.html?id=jean-montana">
+                                <img src="../assets/jean.jpg" alt="Jean femenino. Nombre: Montaña" class="img-fluid">
+                                <p>Jean "Montaña"</p>
+                                <p>$45.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <a href="./detalle-producto.html?id=musculosa-sierra">
+                                <img src="../assets/musculosa.jpg" alt="Musculosa femenina. Nombre: Sierra" class="img-fluid">
+                                <p>Musculosa "Sierra"</p>
+                                <p>$25.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <a href="./detalle-producto.html?id=short-monte">
+                                <img src="../assets/short.jpg" alt="Short femenino. Nombre: Monte" class="img-fluid">
+                                <p>Short "Monte"</p>
+                                <p>$30.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <a href="./detalle-producto.html?id=chaleco-lago">
+                                <img src="../assets/chaleco.jpg" alt="Chaleco masculino. Nombre: Lago" class="img-fluid">
+                                <p>Chaleco "Lago"</p>
+                                <p>$50.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <a href="./detalle-producto.html?id=camisa-rio">
+                                <img src="../assets/camisa.jpg" alt="Camisa femenina. Nombre: Río" class="img-fluid">
+                                <p>Camisa "Río"</p>
+                                <p>$50.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                            <a href="./detalle-producto.html?id=campera-oceano">
+                                <img src="../assets/campera.jpg" alt="Campera masculina. Nombre: Océano" class="img-fluid">
+                                <p>Campera "Océano"</p>
+                                <p>$70.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                            <a href="./detalle-producto.html?id=top-selva">
+                                <img src="../assets/top.jpg" alt="Top femenino. Nombre: Selva" class="img-fluid">
+                                <p>Top "Selva"</p>
+                                <p>$50.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                            <a href="./detalle-producto.html?id=vestido-bosque">
+                                <img src="../assets/vestido.jpg" alt="Vestido femenino. Nombre: Bosque" class="img-fluid">
+                                <p>Vestido "Bosque"</p>
+                                <p>$50.000</p>
+                            </a>
+                        </article>
+                        
+                        <article class="card col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+                            <a href="./detalle-producto.html?id=trench-tundra">
+                                <img src="../assets/trench.jpg" alt="Trench femenino. Nombre: Tundra" class="img-fluid">
+                                <p>Trench "Tundra"</p>
+                                <p>$70.000</p>
+                            </a>
+                        </article>
                     </div>
-
-                    <div>
-                        <label for="min-price">Precio Mínimo</label>
-                        <input type="number" id="min-price" name="min_price" placeholder="min." class="form-control filter-input-price">
-                        <label for="max-price">Precio Máximo</label>
-                        <input type="number" id="max-price" name="max_price" placeholder="max." class="form-control filter-input-price">
-                    </div>
-
-                    <div>
-                        <label for="categorias">Categorías</label>
-                        <select id="categorias" name="category" class="form-select">
-                            <option>-</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="prendas">Prendas</label>
-                        <select id="prendas" name="item" class="form-select">
-                            <option>-</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="colores">Colores</label>
-                        <select id="colores" name="color" class="form-select">
-                            <option>-</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="talle">Talle</label>
-                        <select id="talle" name="size" class="form-select">
-                            <option>-</option>
-                        </select>
-                    </div>
-
-                    <button id="filtrador" type="submit" class="btn btn-primary">Aplicar Filtros</button>
-                </form>
-
-            </aside>
-
-            <div class="productos col-md-9">
-                <div class="row">
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=jean-montana">
-                            <img src="../assets/jean.jpg" alt="Jean femenino. Nombre: Montaña" class="img-fluid">
-                            <p>Jean "Montaña"</p>
-                            <p>$45.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=musculosa-sierra">
-                            <img src="../assets/musculosa.jpg" alt="Musculosa femenina. Nombre: Sierra" class="img-fluid">
-                            <p>Musculosa "Sierra"</p>
-                            <p>$25.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=short-monte">
-                            <img src="../assets/short.jpg" alt="Short femenino. Nombre: Monte" class="img-fluid">
-                            <p>Short "Monte"</p>
-                            <p>$30.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=chaleco-lago">
-                            <img src="../assets/chaleco.jpg" alt="Chaleco masculino. Nombre: Lago" class="img-fluid">
-                            <p>Chaleco "Lago"</p>
-                            <p>$50.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=camisa-rio">
-                            <img src="../assets/camisa.jpg" alt="Camisa femenina. Nombre: Río" class="img-fluid">
-                            <p>Camisa "Río"</p>
-                            <p>$50.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=campera-oceano">
-                            <img src="../assets/campera.jpg" alt="Campera masculina. Nombre: Océano" class="img-fluid">
-                            <p>Campera "Océano"</p>
-                            <p>$70.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=top-selva">
-                            <img src="../assets/top.jpg" alt="Top femenino. Nombre: Selva" class="img-fluid">
-                            <p>Top "Selva"</p>
-                            <p>$50.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=vestido-bosque">
-                            <img src="../assets/vestido.jpg" alt="Vestido femenino. Nombre: Bosque" class="img-fluid">
-                            <p>Vestido "Bosque"</p>
-                            <p>$50.000</p>
-                        </a>
-                    </article>
-                    
-                    <article class="col-md-4">
-                        <a href="./detalle-producto.html?id=trench-tundra">
-                            <img src="../assets/trench.jpg" alt="Trench femenino. Nombre: Tundra" class="img-fluid">
-                            <p>Trench "Tundra"</p>
-                            <p>$70.000</p>
-                        </a>
-                    </article>
                 </div>
+
             </div>
         </section>
         
-        <div class="text-center">
+        <div class="text-center mb-5">
             <a href="./pages/productos.html" class="btn btn-primary btn-lg" id="ver_mas">VER MÁS ARTÍCULOS</a>
         </div>
 
@@ -181,9 +182,8 @@
 
     <!--------------------FOOTER------------------->
 
-   
     <footer>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
 
                 <div class="col-md-4">
@@ -199,10 +199,10 @@
                 <div class="col-md-4">
                     <h3>Información</h3>
                     <ul id="enlaces" class="list-unstyled">
-                        <li class="enlace"><a href="./preguntas-frecuentes.html" class="text-white">Preguntas Frecuentes</a></li>
-                        <li class="enlace"><a href="./guia-de-talles.html" class="text-white">Guía de Talles</a></li>
-                        <li class="enlace"><a href="./contacto.html" class="text-white">Contacto</a></li>
-                        <li class="enlace"><a href="./envios.html" class="text-white">Envíos</a></li>
+                        <li class="enlace"><a href="./preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                        <li class="enlace"><a href="./guia-de-talles.html">Guía de Talles</a></li>
+                        <li class="enlace"><a href="./contacto.html">Contacto</a></li>
+                        <li class="enlace"><a href="./envios.html">Envíos</a></li>
                     </ul>
                 </div>
 
@@ -223,6 +223,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 
 </html>

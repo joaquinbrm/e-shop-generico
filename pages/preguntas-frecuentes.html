@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Preguntas Frecuentes - Indumentaria's</title>
 </head>
 
@@ -48,34 +49,34 @@
 
             <div class="preguntas">
                 
-                <details>
+                <details data-aos="fade-up" data-aos-delay="0">
                     <summary>¿Qué métodos de pago aceptan?</summary>
                     <p>Aceptamos todas las tarjetas de crédito y débito. También podés pagar mediante transferencia bancaria con un 10% de descuento o en efectivo en nuestro local.</p>
                 </details>
 
-                <details>
+                <details data-aos="fade-up" data-aos-delay="100">
                     <summary>¿Cuánto cuesta el envío?</summary>
                     <p>El costo de envío se calcula automáticamente en el carrito al ingresar tu código postal. ¡Recordá que los envíos son gratuitos en compras superiores a $500.000!</p>
                 </details>
 
-                <details>
+                <details data-aos="fade-up" data-aos-delay="200">
                     <summary>¿Puedo cambiar o devolver un producto?</summary>
                     <p>Sí. Tenés 30 días desde la recepción del producto para realizar cambios o devoluciones. El producto debe estar sin uso y con las etiquetas originales. </p>
                 </details>
 
-                <details>
+                <details data-aos="fade-up" data-aos-delay="300">
                     <summary>¿Cómo sé cuál es mi talle?</summary>
                     <p>Te recomendamos visitar nuestra Guía de Talles, donde encontrarás tablas de medidas exactas para la parte superior e inferior.</p>
                 </details>
 
-                <details>
+                <details data-aos="fade-up" data-aos-delay="400">
                     <summary>¿Hay stock de todos los productos que veo?</summary>
                     <p>Sí, si el producto está visible en nuestra web, significa que tenemos stock disponible en nuestro depósito. Si buscas un talle específico agotado, contáctanos para consultar la reposición.</p>
                 </details>
 
             </div>
 
-            <h2 class="text-center">¿No aparece tu pregunta? <a id="contactanos" href="contacto.html">Contactanos.</a></h2>
+            <h2 class="text-center" data-aos="fade-up">¿No aparece tu pregunta? <a class="contacto" id="contactanos" href="contacto.html">Contactanos.</a></h2>
         </section>
     </main>
 
@@ -123,5 +124,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
 </body>
 </html>
