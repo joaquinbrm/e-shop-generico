@@ -89,7 +89,7 @@ header {
     }
 }
 
-.navegar {
+.navegar, .enlace{
     @extend %link-base;
     
     &:hover {
@@ -114,6 +114,8 @@ main {
     
     h1 {
         margin-bottom: 30px;
+        @include centrar-texto();
+        margin-top: 40px;
     }
     
     h2 {
@@ -176,6 +178,7 @@ aside {
     h2 {
         font-size: 1.5em;
         margin-bottom: 20px;
+        font-weight: 550;
     }
     
     div {
@@ -192,9 +195,7 @@ aside {
     input {
         width: 100%;
     }
-}
-
-#filtrador {
+    #filtrador {
     color: $color-principal;
     font-weight: bolder;
     background-color: rgb(255, 255, 255);
@@ -206,10 +207,12 @@ aside {
     &:hover {
         background-color: rgba(255, 255, 255, 0.568);
     }
+    }
 }
 
 .productos {
     padding: 20px;
+    padding-top: 0px;
 
     article {
         @include centrar-texto;
@@ -220,18 +223,25 @@ aside {
     
     img {
         @extend %imagen-responsive;
-        max-height: 400px;
+        max-height: 300px;
         object-fit: cover;
         @include bordes-redondeados(10px);
     }
     
-    p {
+    p{
         @include centrar-texto;
         padding: 5px 0;
         margin: 5px 0;
         font-weight: 600;
     }
     
+    h4{
+        @include centrar-texto;
+        padding: 5px 0;
+        margin: 5px 0;
+        font-weight: 500;
+    }
+
     a {
         @extend %link-base;
         
@@ -277,7 +287,12 @@ main form {
         padding: 15px;
         margin-bottom: 15px;
         @include bordes-redondeados;
-        border: 1px solid rgba(131, 156, 163, 0.4);
+        border: 1px solid rgba(131, 156, 163, 0.24);
+
+        &:hover{
+            background-color: $color-fondo;
+            border: 2px solid rgba(131, 156, 163, 0.062);
+        }
     }
     
     summary {
@@ -287,7 +302,7 @@ main form {
         font-size: 1.1em;
         
         &:hover {
-            color: $color-hover-suave;
+            color: $color-hover;
         }
     }
     
@@ -297,19 +312,14 @@ main form {
         line-height: 1.6;
     }
     
-    a {
-        color: $color-principal;
-        text-decoration: underline;
-    }
+
 }
 
-main section h2 #contactanos {
-    color: #000;
-    text-decoration: none;
+main section h2 a{
+    @extend %link-base;
     
     &:hover {
-        color: $color-hover-suave;
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
 
@@ -344,6 +354,15 @@ th {
 #medidas {
     margin-left: 25%;
     width: 64%;
+}
+
+//ENVÍOS
+.envios a{
+    @extend %link-base;
+
+    &:hover{
+        text-decoration: underline;
+    } 
 }
 
 // FOOTER

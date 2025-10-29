@@ -1,4 +1,4 @@
-#enlaces li a, .productos a, .navegar, #ver_todo,
+#enlaces li a, .envios a, main section h2 a, .productos a, .navegar, .enlace, #ver_todo,
 #ver_mas,
 #enviar_consulta {
   text-decoration: none;
@@ -50,7 +50,7 @@ header nav ul li a {
   color: #333;
 }
 
-.navegar:hover {
+.navegar:hover, .enlace:hover {
   color: #000000;
   text-decoration: underline;
 }
@@ -68,6 +68,8 @@ main section {
 }
 main h1 {
   margin-bottom: 30px;
+  text-align: center;
+  margin-top: 40px;
 }
 main h2 {
   margin-bottom: 20px;
@@ -117,6 +119,7 @@ aside {
 aside h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
+  font-weight: 550;
 }
 aside div {
   margin-bottom: 15px;
@@ -130,8 +133,7 @@ aside select,
 aside input {
   width: 100%;
 }
-
-#filtrador {
+aside #filtrador {
   color: #333;
   font-weight: bolder;
   background-color: rgb(255, 255, 255);
@@ -140,12 +142,13 @@ aside input {
   border: none;
   border-radius: 10%;
 }
-#filtrador:hover {
+aside #filtrador:hover {
   background-color: rgba(255, 255, 255, 0.568);
 }
 
 .productos {
   padding: 20px;
+  padding-top: 0px;
 }
 .productos article {
   text-align: center;
@@ -154,7 +157,7 @@ aside input {
   max-width: 31%;
 }
 .productos img {
-  max-height: 400px;
+  max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -163,6 +166,12 @@ aside input {
   padding: 5px 0;
   margin: 5px 0;
   font-weight: 600;
+}
+.productos h4 {
+  text-align: center;
+  padding: 5px 0;
+  margin: 5px 0;
+  font-weight: 500;
 }
 .productos a:hover {
   color: #000000;
@@ -197,7 +206,11 @@ main form a:hover {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
-  border: 1px solid rgba(131, 156, 163, 0.4);
+  border: 1px solid rgba(131, 156, 163, 0.24);
+}
+.preguntas details:hover {
+  background-color: rgba(131, 156, 163, 0.404);
+  border: 2px solid rgba(131, 156, 163, 0.062);
 }
 .preguntas summary {
   color: #333;
@@ -206,25 +219,16 @@ main form a:hover {
   font-size: 1.1em;
 }
 .preguntas summary:hover {
-  color: #555454;
+  color: #000000;
 }
 .preguntas p {
   margin-top: 15px;
   margin-bottom: 0;
   line-height: 1.6;
 }
-.preguntas a {
-  color: #333;
-  text-decoration: underline;
-}
 
-main section h2 #contactanos {
-  color: #000;
-  text-decoration: none;
-}
-main section h2 #contactanos:hover {
-  color: #555454;
-  text-decoration: none;
+main section h2 a:hover {
+  text-decoration: underline;
 }
 
 .tablas {
@@ -256,6 +260,10 @@ th {
 #medidas {
   margin-left: 25%;
   width: 64%;
+}
+
+.envios a:hover {
+  text-decoration: underline;
 }
 
 footer {
