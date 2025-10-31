@@ -291,7 +291,10 @@ footer img {
 }
 
 .iconos {
-  margin-left: 33%;
+  justify-content: center;
+}
+.iconos .rrss {
+  max-width: 20px;
 }
 
 .copyright {
@@ -304,11 +307,14 @@ footer img {
   header {
     padding: 10px 20px;
   }
-  .productos img {
-    max-height: 350px;
+  .productos article {
+    min-width: 100%;
+    object-position: center;
+    min-height: 100%;
   }
-  aside {
+  .prods aside {
     margin-bottom: 30px;
+    position: relative;
   }
   .tablas {
     margin-left: 0;
