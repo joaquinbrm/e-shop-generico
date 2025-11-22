@@ -1,8 +1,13 @@
-#enlaces li a, .envios a, main section h2 a, .productos a, .navegar, .enlace, #ver_todo,
+footer ul li a, .envios a, .prods .productos a, .navegar, .enlace, #ver_todo,
 #ver_mas,
 #enviar_consulta {
   text-decoration: none;
   color: #333;
+}
+footer ul li a:hover, .envios a:hover, .prods .productos a:hover, .navegar:hover, .enlace:hover, #ver_todo:hover,
+#ver_mas:hover,
+#enviar_consulta:hover {
+  color: #000000;
 }
 
 #ver_todo,
@@ -17,14 +22,17 @@
   background-color: rgba(131, 156, 163, 0.205);
 }
 
-.productos img {
+.prods .productos img {
   width: 100%;
   height: auto;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
   color: #333;
   margin: 0;
   padding: 0;
@@ -46,7 +54,7 @@ header .nombre_marca {
   font-weight: bold;
   color: #333;
 }
-header nav ul li a {
+header nav {
   color: #333;
 }
 
@@ -56,11 +64,11 @@ header nav ul li a {
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main {
-  padding: 0 !important;
+  padding: 0;
 }
 main section {
   margin-top: 40px;
@@ -105,10 +113,11 @@ main h2 {
 }
 
 .prods {
-  padding: 20px;
+  display: flex;
+  gap: 20px;
 }
-
-aside {
+.prods aside {
+  flex: 0 0 250px;
   background-color: rgba(131, 156, 163, 0.404);
   padding: 20px;
   border-radius: 8px;
@@ -116,84 +125,81 @@ aside {
   top: 10px;
   max-height: 650px;
 }
-aside h2 {
+.prods aside h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
   font-weight: 550;
 }
-aside div {
+.prods aside div {
   margin-bottom: 15px;
 }
-aside input.filter-input-price {
+.prods aside input.filter-input-price {
   width: 80px;
   display: inline-block;
   margin: 5px;
 }
-aside select,
-aside input {
+.prods aside select,
+.prods aside input {
   width: 100%;
 }
-aside #filtrador {
+.prods aside #filtrador {
   color: #333;
   font-weight: bolder;
   background-color: rgb(255, 255, 255);
   margin-top: 10%;
-  margin-left: 27%;
+  width: 100%;
   border: none;
-  border-radius: 10%;
+  border-radius: 10px;
 }
-aside #filtrador:hover {
+.prods aside #filtrador:hover {
   background-color: rgba(255, 255, 255, 0.568);
 }
-
-.productos {
+.prods .productos {
+  flex: 1;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
 }
-.productos article {
+.prods .productos article {
   text-align: center;
   margin: 7px;
   padding: 13px;
-  max-width: 31%;
+  width: calc(33.333% - 14px);
 }
-.productos img {
+.prods .productos img {
   max-height: 300px;
   object-fit: cover;
+  object-position: center;
   border-radius: 10px;
 }
-.productos p {
+.prods .productos p {
   text-align: center;
   padding: 5px 0;
   margin: 5px 0;
   font-weight: 600;
 }
-.productos h4 {
+.prods .productos h4 {
   text-align: center;
   padding: 5px 0;
   margin: 5px 0;
   font-weight: 500;
 }
-.productos a:hover {
+.prods .productos a:hover {
   color: #000000;
 }
 
-main form label {
+form label {
   display: block;
   margin-top: 10px;
   font-weight: 600;
 }
-main form input,
-main form textarea {
+form input,
+form textarea {
   font-size: 17px;
   margin-bottom: 10px;
   margin-top: 5px;
-}
-main form a {
-  color: #333;
-  text-decoration: underline;
-}
-main form a:hover {
-  color: #000;
 }
 
 .preguntas {
@@ -227,38 +233,25 @@ main form a:hover {
   line-height: 1.6;
 }
 
-main section h2 a:hover {
-  text-decoration: underline;
-}
-
-.tablas {
+.guia_de_talles .tablas {
   margin-bottom: 30px;
 }
-.tablas h2 {
+.guia_de_talles .tablas h2 {
   text-align: left;
   margin-top: 30px;
 }
-
-table {
-  border-collapse: collapse;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-th,
-td {
+.guia_de_talles th,
+.guia_de_talles td {
   border: 1px solid #ccc;
   padding: 12px 15px;
   text-align: center;
 }
-
-th {
+.guia_de_talles th {
   background-color: rgba(131, 156, 163, 0.3);
   font-weight: 700;
 }
-
-#medidas {
-  margin-left: 25%;
+.guia_de_talles #medidas {
+  margin: 0 auto;
   width: 64%;
 }
 
@@ -274,7 +267,7 @@ footer {
   text-align: center;
 }
 footer h3 {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-bottom: 15px;
   font-weight: 700;
 }
@@ -285,42 +278,41 @@ footer ul {
 footer ul li {
   margin-bottom: 8px;
 }
+footer .iconos {
+  justify-content: center;
+}
 footer img {
   width: 30px;
   height: 30px;
 }
-
-.iconos {
-  justify-content: center;
-}
-.iconos .rrss {
-  max-width: 20px;
-}
-
-.copyright {
+footer .copyright {
   font-size: 15px;
   margin-top: 30px;
   margin-bottom: 0;
 }
 
+@media (max-width: 1024px) {
+  .prods {
+    flex-direction: column;
+  }
+  .prods aside {
+    position: relative;
+    max-height: none;
+  }
+  .productos article {
+    width: calc(50% - 7px);
+  }
+}
 @media (max-width: 768px) {
   header {
     padding: 10px 20px;
   }
   .productos article {
-    min-width: 100%;
-    object-position: center;
-    min-height: 100%;
-  }
-  .prods aside {
-    margin-bottom: 30px;
-    position: relative;
-  }
-  .tablas {
-    margin-left: 0;
+    width: 100%;
   }
   #medidas {
-    margin-right: 0;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
