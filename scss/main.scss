@@ -86,12 +86,6 @@ header {
     }
 }
 
-.card {
-    &:hover {
-        box-shadow: 0 4px 8px $color-hover;
-    }
-}
-
 // MAIN
 main {
     padding: 0;
@@ -110,10 +104,14 @@ main {
         margin-bottom: 20px;
         margin-top: 20px;
     }
-}
+    
+    .card {
+        &:hover {
+            box-shadow: 0 4px 8px $color-hover;
+        }
+    }
 
-// INDEX
-.marca {
+    .marca {
     font-family: $fuente-principal;
     font-weight: bolder;
     text-align: center;
@@ -123,32 +121,30 @@ main {
     overflow: hidden;
 }
 
-.temporada {
-    margin-bottom: 80px;
+    .seccion {
+        margin-bottom: 80px;
+        padding: 1%;
+        
+        .nombre_producto {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .precio {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: $color-principal;
+        }
+    }
+
+    // Botones
+    #ver_todo,
+    #ver_mas,
+    #enviar_consulta {
+        @extend %boton-base;
+    }
 }
 
-.seccion {
-    margin-bottom: 80px;
-    padding: 1%;
-    
-    .nombre_producto {
-        font-weight: 600;
-        margin-top: 10px;
-    }
-    
-    .precio {
-        font-weight: 700;
-        font-size: 1.2em;
-        color: $color-principal;
-    }
-}
-
-// Botones
-#ver_todo,
-#ver_mas,
-#enviar_consulta {
-    @extend %boton-base;
-}
 
 // PRODUCTOS
 .prods {
