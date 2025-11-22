@@ -1,10 +1,10 @@
-footer ul li a, .envios a, .prods .productos a, .navegar, .enlace, #ver_todo,
+footer ul li a, footer ul, .envios a, .prods .productos a, .navegar, .enlace, #ver_todo,
 #ver_mas,
 #enviar_consulta {
   text-decoration: none;
   color: #333;
 }
-footer ul li a:hover, .envios a:hover, .prods .productos a:hover, .navegar:hover, .enlace:hover, #ver_todo:hover,
+footer ul li a:hover, footer ul:hover, .envios a:hover, .prods .productos a:hover, .navegar:hover, .enlace:hover, #ver_todo:hover,
 #ver_mas:hover,
 #enviar_consulta:hover {
   color: #000000;
@@ -27,12 +27,9 @@ footer ul li a:hover, .envios a:hover, .prods .productos a:hover, .navegar:hover
   height: auto;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
   color: #333;
   margin: 0;
   padding: 0;
@@ -64,7 +61,7 @@ header nav {
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px #000000;
 }
 
 main {
@@ -89,7 +86,7 @@ main h2 {
   font-weight: bolder;
   text-align: center;
   padding: 60px 0;
-  background: linear-gradient(to bottom, rgba(131, 156, 163, 0.404), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(to bottom, rgba(131, 156, 163, 0.404), white);
   margin: 0;
   overflow: hidden;
 }
@@ -145,14 +142,14 @@ main h2 {
 .prods aside #filtrador {
   color: #333;
   font-weight: bolder;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   margin-top: 10%;
   width: 100%;
   border: none;
   border-radius: 10px;
 }
 .prods aside #filtrador:hover {
-  background-color: rgba(255, 255, 255, 0.568);
+  background-color: rgba(131, 156, 163, 0.2);
 }
 .prods .productos {
   flex: 1;
@@ -212,11 +209,10 @@ form textarea {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
-  border: 1px solid rgba(131, 156, 163, 0.24);
+  border: 1px solid rgba(131, 156, 163, 0.404);
 }
 .preguntas details:hover {
   background-color: rgba(131, 156, 163, 0.404);
-  border: 1px solid rgba(131, 156, 163, 0.062);
 }
 .preguntas summary {
   color: #333;
@@ -242,12 +238,11 @@ form textarea {
 }
 .guia_de_talles th,
 .guia_de_talles td {
-  border: 1px solid #ccc;
   padding: 12px 15px;
   text-align: center;
 }
 .guia_de_talles th {
-  background-color: rgba(131, 156, 163, 0.3);
+  background-color: rgba(131, 156, 163, 0.2);
   font-weight: 700;
 }
 .guia_de_talles #medidas {

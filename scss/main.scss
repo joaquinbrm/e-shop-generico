@@ -5,18 +5,10 @@ $color-fondo: rgba(131, 156, 163, 0.404);
 $color-fondo-claro: rgba(131, 156, 163, 0.2);
 $color-hover: #000000;
 $color-hover-suave: #555454;
-$color-sombra: rgba(0, 0, 0, 0.2);
-$borde-color: #ddd;
 $fuente-principal: Arial, Helvetica, sans-serif;
-$border-radius-pequeno: 5px;
+$border-radius-pequeño: 5px;
 $border-radius-medio: 8px;
 $border-radius-grande: 10px;
-
-// Spacing
-$spacing-sm: 10px;
-$spacing-md: 20px;
-$spacing-lg: 40px;
-$spacing-xl: 60px;
 
 // Mixins
 @mixin bordes-redondeados($radio) {
@@ -24,8 +16,8 @@ $spacing-xl: 60px;
 }
 
 @mixin espaciado-seccion {
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-lg;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 // Extends
@@ -53,12 +45,9 @@ $spacing-xl: 60px;
 }
 
 // Estilos generales
-html, body {
-    height: 100%;
-}
-
 body {
     font-family: $fuente-principal;
+    height: 100%;
     color: $color-principal;
     margin: 0;
     padding: 0;
@@ -67,7 +56,7 @@ body {
 // HEADER
 header {
     background-color: $color-fondo;
-    padding: $spacing-sm $spacing-lg;
+    padding: 10px 40px;
     font-size: 18px;
     
     #logo {
@@ -88,7 +77,7 @@ header {
     }
 }
 
-.navegar, .enlace {
+.navegar, .enlace{
     @extend %link-base;
     
     &:hover {
@@ -99,7 +88,7 @@ header {
 
 .card {
     &:hover {
-        box-shadow: 0 4px 8px $color-sombra;
+        box-shadow: 0 4px 8px $color-hover;
     }
 }
 
@@ -114,12 +103,12 @@ main {
     h1 {
         margin-bottom: 30px;
         text-align: center;
-        margin-top: $spacing-lg;
+        margin-top: 40px;
     }
     
     h2 {
-        margin-bottom: $spacing-md;
-        margin-top: $spacing-md;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -128,8 +117,8 @@ main {
     font-family: $fuente-principal;
     font-weight: bolder;
     text-align: center;
-    padding: $spacing-xl 0;
-    background: linear-gradient(to bottom, $color-fondo, rgba(255, 255, 255, 0.3));
+    padding: 60px 0;
+    background: linear-gradient(to bottom, $color-fondo, white);
     margin: 0;
     overflow: hidden;
 }
@@ -144,7 +133,7 @@ main {
     
     .nombre_producto {
         font-weight: 600;
-        margin-top: $spacing-sm;
+        margin-top: 10px;
     }
     
     .precio {
@@ -164,20 +153,20 @@ main {
 // PRODUCTOS
 .prods {
     display: flex;
-    gap: $spacing-md;
+    gap: 20px;
     
     aside {
         flex: 0 0 250px;
         background-color: $color-fondo;
-        padding: $spacing-md;
+        padding: 20px;
         @include bordes-redondeados($border-radius-medio);
         position: sticky;
-        top: $spacing-sm;
+        top: 10px;
         max-height: 650px;
         
         h2 {
             font-size: 1.5em;
-            margin-bottom: $spacing-md;
+            margin-bottom: 20px;
             font-weight: 550;
         }
         
@@ -199,21 +188,21 @@ main {
         #filtrador {
             color: $color-principal;
             font-weight: bolder;
-            background-color: rgb(255, 255, 255);
+            background-color: white;
             margin-top: 10%;
             width: 100%;
             border: none;
             @include bordes-redondeados($border-radius-grande);
             
             &:hover {
-                background-color: rgba(255, 255, 255, 0.568);
+                background-color: $color-fondo-claro;
             }
         }
     }
     
     .productos {
         flex: 1;
-        padding: $spacing-md;
+        padding: 20px;
         padding-top: 0;
         display: flex;
         flex-wrap: wrap;
@@ -262,14 +251,14 @@ main {
 form {
     label {
         display: block;
-        margin-top: $spacing-sm;
+        margin-top: 10px;
         font-weight: 600;
     }
     
     input,
     textarea {
         font-size: 17px;
-        margin-bottom: $spacing-sm;
+        margin-bottom: 10px;
         margin-top: 5px;
     }
 }
@@ -284,12 +273,11 @@ form {
         background-color: $color-fondo-claro;
         padding: 15px;
         margin-bottom: 15px;
-        @include bordes-redondeados($border-radius-pequeno);
-        border: 1px solid rgba(131, 156, 163, 0.24);
+        @include bordes-redondeados($border-radius-pequeño);
+        border: 1px solid $color-fondo;
 
-        &:hover {
+        &:hover{
             background-color: $color-fondo;
-            border: 1px solid rgba(131, 156, 163, 0.062);
         }
     }
     
@@ -311,7 +299,7 @@ form {
     }
 }
 
-// GUIA DE TALLES
+// GUÍA DE TALLES
 .guia_de_talles {
     .tablas {
         margin-bottom: 30px;
@@ -324,13 +312,12 @@ form {
 
     th,
     td {
-        border: 1px solid #ccc;
         padding: 12px 15px;
         text-align: center;
     }
 
     th {
-        background-color: rgba(131, 156, 163, 0.3);
+        background-color: $color-fondo-claro;
         font-weight: 700;
     }
 
@@ -340,7 +327,7 @@ form {
     }
 }
 
-// ENVIOS
+// ENVÍOS
 .envios a {
     @extend %link-base;
 
@@ -353,7 +340,7 @@ form {
 footer {
     background-color: $color-fondo;
     color: $color-principal;
-    padding: $spacing-lg $spacing-md;
+    padding: 40px 20px;
     margin-top: 60px;
     text-align: center;
     
@@ -366,6 +353,7 @@ footer {
     ul {
         list-style: none;
         padding: 0;
+        @extend %link-base;
         
         li {
             margin-bottom: 8px;
@@ -410,7 +398,7 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        padding: $spacing-sm $spacing-md;
+        padding: 10px 20px;
     }
     
     .productos article {
