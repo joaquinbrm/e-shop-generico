@@ -1,0 +1,32 @@
+// HEADER
+header {
+    background-color: $color-fondo;
+    padding: 10px 40px;
+    font-size: 18px;
+    
+    #logo {
+        width: 60px;
+        height: 60px;
+        @include bordes-redondeados(100%);
+    }
+    
+    .nombre_marca {
+        margin: 0;
+        font-size: 25px;
+        font-weight: bold;
+        color: $color-principal;
+    }
+    
+    nav {
+        color: $color-principal;
+    }
+}
+
+.navegar, .enlace{
+    @extend %link-base;
+    
+    &:hover {
+        color: $color-hover;
+        text-decoration: underline;
+    }
+}

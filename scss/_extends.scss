@@ -1,0 +1,22 @@
+%link-base {
+    text-decoration: none;
+    color: $color-principal;
+    &:hover {
+        color: $color-hover;
+    }
+}
+
+%boton-base {
+    @extend %link-base;
+    background-color: $color-fondo;
+    border: none;
+    
+    &:hover {
+        background-color: rgba(131, 156, 163, 0.205);
+    }
+}
+
+%imagen-responsive {
+    width: 100%;
+    height: auto;
+}
