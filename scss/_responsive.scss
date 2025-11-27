@@ -32,6 +32,13 @@
             }
         }
     }
+
+    .guia_de_talles {
+        #medidas {
+            width: 100%; 
+            min-width: 300px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -88,10 +95,4 @@
         }
     }
     
-    .guia_de_talles {
-        #medidas {
-            width: 100%; 
-            min-width: 400px;
-        }
-    }
 }

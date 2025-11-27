@@ -303,6 +303,10 @@ form textarea {
   .prods .productos article {
     width: 48%;
   }
+  .guia_de_talles #medidas {
+    width: 100%;
+    min-width: 300px;
+  }
 }
 @media (max-width: 768px) {
   main .seccion {
@@ -346,10 +350,6 @@ form textarea {
   .prods .productos article img {
     width: 100%;
     max-height: auto;
-  }
-  .guia_de_talles #medidas {
-    width: 100%;
-    min-width: 400px;
   }
 }
 
